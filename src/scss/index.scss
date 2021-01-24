@@ -1,7 +1,8 @@
 @import '/node_modules/scss-reset/_reset.scss';
-@import 'node_modules/scss-reset/src/scss/_variables.scss';
-@import 'node_modules/scss-reset/src/scss/_typography.scss';
+// @import 'node_modules/scss-reset/src/scss/_variables.scss';
+// @import 'node_modules/scss-reset/src/scss/_typography.scss';
 @import 'font';
+@import 'reset';
 @import 'variables';
 @import 'base';
 @import 'button';
@@ -10,5 +11,7 @@
 @import 'slide';
 @import 'head';
 @import 'nav';
+@import 'facts';
 @import 'gallery';
+@import 'about';
 @import 'confirm';

@@ -6,9 +6,12 @@
     display: flex;
     width: 40%;
     justify-content: flex-start;
+    align-items: center;
   }
   &__link {
     color: #fff;
+    font-size: 18px;
+    line-height: 33px;
     &:nth-child(odd) {
       margin-right: 60px;
     }

@@ -1,0 +1,28 @@
+.about {
+  background-color: #e6e6e6;
+  margin-top: 20px;
+  & .wrapper {
+    max-width: 1380px;
+  }
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    &-list {
+      display: flex;
+    }
+    &-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 26px;
+      color: #707070;
+      margin-right: 30px;
+    }
+    &-element:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

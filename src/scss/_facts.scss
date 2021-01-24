@@ -1,3 +1,111 @@
-.facts{
-    position: absolute;
+.facts {
+  margin-top: 180px;
+  &--innovation {
+    margin-top: 280px;
+    & .wrapper {
+      justify-content: space-around;
+    }
+  }
+  & .wrapper {
+    display: flex;
+    max-width: 1840px;
+    flex-wrap: wrap;
+  }
+  &__photo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    flex: 0 1 48%;
+  }
+  &__photo-element {
+    &:nth-child(1):not(&--innovation) {
+      align-self: flex-end;
+      margin-bottom: -70px;
+      margin-right: 10px;
+    }
+    &--innovation:nth-child(2) {
+      margin-top: -80px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 50%;
+    &-container {
+      max-width: 661px;
+      margin-left: 150px;
+      &--innovation {
+        max-width: 536px;
+        margin-left: 180px;
+      }
+    }
+    &-heading {
+      font-family: 'Cairo', sans-serif;
+      font-size: 36px;
+      line-height: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      &--innovation {
+        max-width: 200px;
+      }
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 190px;
+      height: 172px;
+      margin-top: 30px;
+      margin-right: 30px;
+
+      // max-width: 220px;
+    }
+    &-text {
+      margin-top: 22.5px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      color: $color-dark-gray;
+    }
+
+    &-number {
+      font-weight: 700;
+      font-family: 'Caior', sans-serif;
+      font-size: 12px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #eee;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        display: block;
+        width: 8%;
+        height: 2px;
+        background-color: $color-gray;
+        z-index: 999;
+      }
+    }
+  }
+  &__text-1 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 45px;
+  }
+  &__text-2 {
+    font-size: 14px;
+    margin-top: 30px;
+    max-width: 475px;
+  }
 }

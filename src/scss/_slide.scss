@@ -6,21 +6,39 @@
     left: 0;
     right: 0;
     width: 100%;
-    max-width: 1360px;
+    max-width: 1380px;
     z-index: 10;
     margin: 0 auto;
     transform: translateY(-50%);
   }
   &__heading {
-    font-family: 'Cairo';
+    font-family: 'Cairo', sans-serif;
     font-weight: 700;
     font-size: 64px;
     line-height: 64px;
     color: #fff;
     text-transform: uppercase;
   }
+  &__button.button {
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    z-index: 10;
+    color: white;
+    transform: translateX(-50%);
+    background-color: $color-blue;
+    padding: 15px 90px;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+      color: #bbb;
+    }
+  }
   &__subheading {
-    font-family: 'Cairo';
+    font-family: 'Cairo', sans-serif;
     font-weight: 600;
     color: #fff;
     font-size: 16px;
