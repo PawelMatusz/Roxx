@@ -1,3 +1,10 @@
 .button {
-  color: white;
+  background-color: $color-blue;
+  padding: 15px 90px;
+  text-transform: uppercase;
+  font-family: 'Cairo', sans-serif;
+  font-size: 18px;
+  line-height: 33px;
+  letter-spacing: 1px;
+  color: #fff;
 }

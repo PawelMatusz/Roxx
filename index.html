@@ -374,7 +374,7 @@
         </div>
       </section>
       <section class="appointment">
-        <div class="appointment__photo">
+        <div class="appointment__photo-1">
           <img
             src="./src/img/bmw-ix-front.png"
             srcset="
@@ -384,22 +384,12 @@
             alt=""
           />
         </div>
-        <div class="appointment__photo">
-          <img
-            src="./src/img/13273-2022-bmw-ix.png"
-            srcset="
-              ./src/img/13273-2022-bmw-ix.png    1x,
-              ./src/img/13273-2022-bmw-ix@2x.png 2x
-            "
-            alt=""
-          />
-        </div>
         <div class="appointment__description">
           <h2 class="appointment__description-heading">
             Umów jazdę próbną BMW iX
           </h2>
           <p class="appointment__description-text">
-            Zachęcamy do ograniczenia poruszania się i pozostania w domu. Jeśli
+            Zachęcamy do ograniczenia poruszania się i pozostania w domu. Jeśli
             jednak jazda testowa okaże się niezbędna prosimy o wypełnienie
             poniższego formularza.
           </p>
@@ -414,25 +404,71 @@
                   type="checkbox"
                   name="male"
                   id="male"
-                />Pan<label for="male"></label>
+                /><label class="form__checkbox-label" for="male">Pan</label>
                 <input
                   class="form__checkbox"
                   type="checkbox"
                   name="female"
                   id="female"
-                />Pani<label for="female"></label>
+                /><label class="form__checkbox-label" for="female">Pani</label>
               </p>
-              <input class="form__input" type="text" />
-              <input class="form__input" type="text" />
-              <input class="form__input" type="email" />
-              <input class="form__input" type="number" />
+              <div class="form__input-container">
+                <input
+                  id="surname"
+                  class="form__input"
+                  type="text"
+                  placeholder=" "
+                /><label class="form__input-label" for="surname">Imię*</label>
+              </div>
+              <div class="form__input-container">
+                <input
+                  id="name"
+                  class="form__input"
+                  type="text"
+                  placeholder=" "
+                /><label class="form__input-label" for="name">Nazwisko*</label>
+              </div>
+              <div class="form__input-container">
+                <input
+                  id="email"
+                  class="form__input"
+                  type="email"
+                  placeholder=" "
+                /><label class="form__input-label" for="email">E-mail*</label>
+              </div>
+              <div class="form__input-container">
+                <input
+                  id="number"
+                  class="form__input"
+                  type="number"
+                  placeholder=" "
+                /><label class="form__input-label" for="number"
+                  >Numer telefonu*</label
+                >
+              </div>
             </fieldset>
-            <button class="button form__button" type="submit">Wyślij</button>
+            <button
+              class="button form__button"
+              type="submit"
+              data-form-send="open"
+            >
+              Wyślij
+            </button>
           </form>
+        </div>
+        <div class="appointment__photo-2">
+          <img
+            src="./src/img/13273-2022-bmw-ix.png"
+            srcset="
+              ./src/img/13273-2022-bmw-ix.png    1x,
+              ./src/img/13273-2022-bmw-ix@2x.png 2x
+            "
+            alt=""
+          />
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <section class="about">
         <div class="wrapper">
           <article class="about__social">
@@ -552,7 +588,6 @@
               stroke-width="1"
             />
           </svg>
-
           <article class="about__menu">
             <div class="about__zone">
               <h3 class="about__menu-heading">Strefa Klienta</h3>
@@ -583,15 +618,29 @@
           </article>
         </div>
       </section>
-      <div class="wrapper"><p>© BMW Polska 2020</p></div>
+      <div class="wrapper">
+        <p class="about__copyrights">© BMW Polska 2020</p>
+      </div>
     </footer>
-    <div class="confirm">
-      <h3 class="confirm__heading">Dziękujemy</h3>
-      <p class="confirm__text">
-        Skontaktujemy się z Tobą w najbliższym możliwym terminie.
-      </p>
-      <button class="button confirm__button">OK</button>
+    <div class="confirm" data-confirm-form>
+      <div class="confirm__container">
+        <h3 class="confirm__heading">Dziękujemy</h3>
+        <p class="confirm__text">
+          Skontaktujemy się z Tobą w najbliższym możliwym terminie.
+        </p>
+        <button class="button confirm__button" data-form-send="close">
+          OK
+        </button>
+      </div>
     </div>
-    <script src="./src/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.from('.about__social', {
+        scrollTrigger: '.about__social', // start the animation when ".box" enters the viewport (once)
+        x: 500,
+      });
+    </script>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>

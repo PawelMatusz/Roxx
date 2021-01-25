@@ -1,9 +1,16 @@
 // core version + navigation, pagination modules:
 import Swiper from 'swiper/bundle';
-
 // configure Swiper to use modules
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
+
+import showMessageToggle from './Form';
+
+const Selectors = {
+  formButton: '[data-form-send]',
+};
+
+const formButton = document.querySelectorAll(Selectors.formButton);
 
 const swiperContainer = document.querySelector('.swiper-container');
 var mySwiper = new Swiper(swiperContainer, {
@@ -26,3 +33,10 @@ var mySwiper = new Swiper(swiperContainer, {
     type: 'bullets',
   },
 });
+
+formButton.forEach(button =>
+  button.addEventListener('click', e => {
+    e.preventDefault();
+    showMessageToggle(e);
+  })
+);
