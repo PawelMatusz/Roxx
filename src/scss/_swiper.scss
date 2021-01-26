@@ -1,6 +1,6 @@
 .swiper {
   &-container {
-    height: 90vh;
+    height: 100vh;
   }
   &-slide-1,
   &-slide-2,
@@ -9,6 +9,9 @@
     background-size: cover;
     width: 100%;
     position: relative;
+    @include media(mobile) {
+      background-position: 75%;
+    }
     &::before {
       content: '';
       display: block;
@@ -35,6 +38,12 @@
     left: 0 !important;
     max-width: 1380px !important;
     text-align: left !important;
+    @include media(mobile) {
+      bottom: 20px !important;
+    }
+    @include media(mobile-horizontal) {
+      bottom: 15px !important;
+    }
     &-bullet {
       width: 40px !important;
       height: 5px !important;
@@ -52,6 +61,10 @@
     left: 50% !important;
     width: 100% !important;
     transform: translateX(-50%) !important;
+    @include media(mobile) {
+      display: flex !important;
+      justify-content: center !important;
+    }
   }
   &-slide {
     & .wrapper {

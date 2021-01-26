@@ -11961,8 +11961,6 @@ exports.default = void 0;
 var message = document.querySelector('[data-confirm-form]');
 
 var showMessageToggle = function showMessageToggle(e) {
-  console.log();
-
   if (e.target.dataset.formSend === 'open') {
     message.classList.add('is-active');
   } else if (e.target.dataset.formSend === 'close') {
@@ -11971,6 +11969,27 @@ var showMessageToggle = function showMessageToggle(e) {
 };
 
 var _default = showMessageToggle;
+exports.default = _default;
+},{}],"src/js/Nav.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var nav = document.querySelector('.nav--mobile');
+
+var openNav = function openNav(e) {
+  console.log(e.target.dataset);
+
+  if (e.target.dataset.navButton === 'open') {
+    nav.classList.add('is-open');
+  } else if (e.target.dataset.navButton === 'close') {
+    nav.classList.remove('is-open');
+  }
+};
+
+var _default = openNav;
 exports.default = _default;
 },{}],"src/js/index.js":[function(require,module,exports) {
 "use strict";
@@ -11981,15 +12000,19 @@ require("swiper/swiper-bundle.css");
 
 var _Form = _interopRequireDefault(require("./Form"));
 
+var _Nav = _interopRequireDefault(require("./Nav"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // core version + navigation, pagination modules:
 // configure Swiper to use modules
 // import Swiper styles
 var Selectors = {
-  formButton: '[data-form-send]'
+  formButtons: '[data-form-send]',
+  navButtons: '[data-nav-button]'
 };
-var formButton = document.querySelectorAll(Selectors.formButton);
+var formButtons = document.querySelectorAll(Selectors.formButtons),
+    navButtons = document.querySelectorAll(Selectors.navButtons);
 var swiperContainer = document.querySelector('.swiper-container');
 var mySwiper = new _bundle.default(swiperContainer, {
   // Optional parameters
@@ -12011,13 +12034,18 @@ var mySwiper = new _bundle.default(swiperContainer, {
     type: 'bullets'
   }
 });
-formButton.forEach(function (button) {
+formButtons.forEach(function (button) {
   return button.addEventListener('click', function (e) {
     e.preventDefault();
     (0, _Form.default)(e);
   });
 });
-},{"swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css","./Form":"src/js/Form.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+navButtons.forEach(function (button) {
+  return button.addEventListener('click', function (e) {
+    (0, _Nav.default)(e);
+  });
+});
+},{"swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css","./Form":"src/js/Form.js","./Nav":"src/js/Nav.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12045,7 +12073,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49240" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60035" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

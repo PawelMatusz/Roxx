@@ -14,10 +14,30 @@
   font-family: 'Cairo', sans-serif;
   font-weight: bold;
   font-size: 18px;
+  &--mobile {
+    display: none;
+    @include media(tablet) {
+      display: flex;
+    }
+    & .wrapper {
+      max-width: 1360px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
   &__text {
     font-size: 16px;
     text-align: right;
     margin-right: 80px;
     margin-top: 10px;
+    @include media(tablet) {
+      display: none;
+    }
+  }
+
+  & svg {
+    @include media(tablet) {
+    }
   }
 }

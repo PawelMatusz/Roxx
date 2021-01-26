@@ -8,8 +8,36 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
     margin-bottom: 10px;
+    @include media(tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-nav {
+      @include media(tablet) {
+        margin-top: 30px;
+      }
+    }
+    &-facebook:hover svg {
+      opacity: 1;
+      fill: #4267b2;
+    }
+    &-instagram:hover svg {
+      opacity: 1;
+      fill: #833ab4;
+    }
+    &-youtube:hover svg {
+      opacity: 1;
+      fill: #ff0000;
+    }
+    &-linkedin:hover svg {
+      opacity: 1;
+      fill: #2867b2;
+    }
+    &-twitter:hover svg {
+      opacity: 1;
+      fill: #1da1f2;
+    }
     &-list {
       display: flex;
     }
@@ -21,6 +49,20 @@
       color: #707070;
       margin-right: 30px;
     }
+    &-element {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
     &-element:not(:last-child) {
       margin-right: 20px;
     }
@@ -31,6 +73,9 @@
     align-items: flex-start;
     margin-top: 60px;
     flex-wrap: wrap;
+    @include media(mobile) {
+      flex-direction: column;
+    }
     &-heading {
       font-weight: 300;
       font-size: 20px;
@@ -48,7 +93,7 @@
   &__zone,
   &__bmw,
   &__law {
-    max-width: 340px;
+    max-width: 320px;
     width: 100%;
     font-family: 'Roboto', sans-serif;
     padding-bottom: 60px;

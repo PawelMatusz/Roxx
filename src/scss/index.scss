@@ -1,16 +1,13 @@
 @import '/node_modules/scss-reset/_reset.scss';
-// @import 'node_modules/scss-reset/src/scss/_variables.scss';
-// @import 'node_modules/scss-reset/src/scss/_typography.scss';
 @import 'font';
-@import 'reset';
 @import 'variables';
 @import 'mixins';
 @import 'base';
 @import 'button';
 @import 'header';
+@import 'burger';
 @import 'swiper';
 @import 'slide';
-@import 'head';
 @import 'nav';
 @import 'facts';
 @import 'gallery';

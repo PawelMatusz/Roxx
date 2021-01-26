@@ -5,12 +5,15 @@ import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
 import showMessageToggle from './Form';
+import openNavToggle from './Nav';
 
 const Selectors = {
-  formButton: '[data-form-send]',
+  formButtons: '[data-form-send]',
+  navButtons: '[data-nav-button]',
 };
 
-const formButton = document.querySelectorAll(Selectors.formButton);
+const formButtons = document.querySelectorAll(Selectors.formButtons),
+  navButtons = document.querySelectorAll(Selectors.navButtons);
 
 const swiperContainer = document.querySelector('.swiper-container');
 var mySwiper = new Swiper(swiperContainer, {
@@ -34,9 +37,14 @@ var mySwiper = new Swiper(swiperContainer, {
   },
 });
 
-formButton.forEach(button =>
+formButtons.forEach(button =>
   button.addEventListener('click', e => {
     e.preventDefault();
     showMessageToggle(e);
+  })
+);
+navButtons.forEach(button =>
+  button.addEventListener('click', e => {
+    openNavToggle(e);
   })
 );

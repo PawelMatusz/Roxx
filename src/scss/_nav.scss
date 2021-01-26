@@ -2,12 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &__list {
-    display: flex;
-    width: 40%;
-    justify-content: flex-start;
-    align-items: center;
-  }
+
   &__link {
     color: #fff;
     font-size: 18px;
@@ -16,8 +11,70 @@
       margin-right: 60px;
     }
   }
+  &__list {
+    display: flex;
+    width: 40%;
+    justify-content: flex-start;
+    align-items: center;
+    @include media(tablet) {
+      display: none;
+    }
+    &--mobile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
 
+      & .nav__list-element {
+        flex: 0 0 100%;
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Cairo', sans-serif;
+        text-transform: uppercase;
+        margin-top: 30px;
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    z-index: 15;
+    & svg {
+      pointer-events: none;
+    }
+  }
   &--mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.95);
+    z-index: 15;
     display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &.is-open {
+      display: flex;
+    }
+    & .nav__link {
+      margin-right: 0;
+    }
+    & .nav__link--mobile {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-right: 0;
+      text-transform: uppercase;
+      @include media(mobile-horizontal) {
+        bottom: 20px;
+      }
+    }
   }
 }

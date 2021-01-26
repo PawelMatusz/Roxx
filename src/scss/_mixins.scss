@@ -1,17 +1,29 @@
 @mixin media($breakpoint) {
   // $breakpoint is simply a variable that can have several values
 
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 1380px) {
+      @content;
+    }
+  }
   @if $breakpoint==tablet {
-    // here `laptop` is the value of $breakpoint
-    // when call laptop, we mean the following piece of code
-
-    @media only screen and (max-width: 1035px) {
+    @media only screen and (max-width: 1050px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile-horizontal {
+    @media only screen and (orientation: landscape) {
       @content;
     }
   }
 
   @if $breakpoint==mobile {
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 860px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile-small {
+    @media only screen and (max-width: 420px) {
       @content;
     }
   }

@@ -15,10 +15,42 @@
     &-2 {
       top: 50%;
       left: 8%;
+      @include media(mobile) {
+        left: 50%;
+        position: relative;
+      }
+      &::after {
+        content: url(../img/path12.svg);
+        position: absolute;
+        display: block;
+        top: -140px;
+        left: -40px;
+        z-index: -2;
+        @include media(mobile) {
+          top: -250px;
+          left: -80px;
+        }
+      }
     }
     &-1 {
       top: 25%;
       right: 5%;
+      @include media(mobile) {
+        right: 42%;
+        position: relative;
+      }
+      &::after {
+        content: url(../img/path15.svg);
+        position: absolute;
+        display: block;
+        bottom: -180px;
+        right: 250px;
+        z-index: -2;
+        @include media(mobile) {
+          bottom: -180px;
+          right: 30%;
+        }
+      }
     }
   }
   &__description {
@@ -31,6 +63,36 @@
     align-items: flex-start;
     padding: 90px;
     box-shadow: 0 0 1px 0 #707070;
+    @include media(mobile) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    @include media(mobile) {
+      padding: 10px;
+      max-width: 100%;
+    }
+    &::after {
+      content: url(../img/path13.svg);
+      position: absolute;
+      display: block;
+      top: 180px;
+      left: 390px;
+      z-index: -2;
+      @include media(mobile) {
+        display: none;
+      }
+    }
+    &::before {
+      content: url(../img/path14.svg);
+      position: absolute;
+      display: block;
+      bottom: -80px;
+      left: 40%;
+      z-index: -2;
+      @include media(mobile) {
+        display: none;
+      }
+    }
     &-heading {
       font-size: 36px;
       font-weight: 600;

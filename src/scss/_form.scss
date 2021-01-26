@@ -1,6 +1,9 @@
 .form {
   width: 100%;
   margin-top: 90px;
+  @include media(mobile) {
+    background-color: transparent;
+  }
   &__fieldset {
     display: flex;
     flex-direction: column;
@@ -82,6 +85,5 @@
   }
   &__button {
     margin-top: 60px;
-    background-color: #a5bceb;
   }
 }

@@ -1,0 +1,38 @@
+.burger {
+  overflow: hidden;
+  display: none;
+  width: 32px;
+  height: 40px;
+  margin-right: 1em;
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
+
+  @include media(tablet) {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+.burger__item {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  right: 0;
+  pointer-events: none;
+
+  &:nth-child(1) {
+    top: 10px;
+  }
+
+  &:nth-child(2) {
+    top: 20px;
+  }
+
+  &:nth-child(3) {
+    top: 30px;
+  }
+}

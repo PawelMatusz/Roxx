@@ -8,7 +8,26 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
+  overflow-x: visible;
+  @include media(tablet) {
+    padding: 0 30px;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
 }
 .small {
   text-transform: lowercase;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.85;
+  color: currentColor;
 }
