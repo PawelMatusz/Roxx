@@ -9,6 +9,29 @@
   <body>
     <header class="header">
       <div class="wrapper">
+        <nav class="nav--mobile">
+          <button class="nav__close" data-nav-button="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.707" height="17.707" viewBox="0 0 17.707 17.707">
+              <g id="Group_43" data-name="Group 43" transform="translate(-310.453 -33.336)">
+                <path id="Path_10" data-name="Path 10" d="M1887.452-1065.956l-16.292,16.292" transform="translate(-1560 1100)" fill="#858585" stroke="#858585" stroke-width="2"></path>
+                <path id="Path_11" data-name="Path 11" d="M1871.16-1065.956l16.292,16.292" transform="translate(-1560 1100)" fill="#858585" stroke="#858585" stroke-width="2"></path>
+              </g>
+            </svg>
+          </button>
+          <ul class="nav__list--mobile">
+            <li class="nav__list-element">
+              <a class="nav__link" href="#">nowe bmw ix.</a>
+            </li>
+            <li class="nav__list-element">
+              <a class="nav__link" href="#">innowacyjna aerodynamika</a>
+            </li>
+            <li class="nav__list-element">
+              <a class="nav__link" href="#">galeria</a>
+            </li>
+          </ul>
+
+          <a class="nav__link--mobile button" href="#">Umów jazdę próbną</a>
+        </nav>
         <nav class="nav">
           <button class="burger" data-nav-button="open">
             <span class="burger__item"></span>
@@ -23,9 +46,9 @@
               <a class="nav__link" href="#">Umów jazdę próbną</a>
             </li>
           </ul>
-          <a href=""><img src="/BMW-Logo-103x115-White-NEW.0adf555b.png" srcset="/BMW-Logo-103x115-White-NEW.0adf555b.png    1x,/BMW-Logo-103x115-White-NEW@2x.edc23f68.png 2x" alt=""></a>
+          <a class="nav__logo" href=""><img src="/BMW-Logo-103x115-White-NEW.0adf555b.png" srcset="/BMW-Logo-103x115-White-NEW.0adf555b.png    1x,/BMW-Logo-103x115-White-NEW@2x.edc23f68.png 2x" alt=""></a>
         </nav>
-        <svg xmlns="http://www.w3.org/2000/svg" width="1284" height="1" viewBox="0 0 1284 1">
+        <svg class="header__line" xmlns="http://www.w3.org/2000/svg" width="1284" height="1" viewBox="0 0 1284 1">
           <defs>
             <style>.a {
                 fill: none;
@@ -37,29 +60,6 @@
         </svg>
         <p class="header__text">Radość z jazdy</p>
       </div>
-      <nav class="nav--mobile">
-        <button class="nav__close" data-nav-button="close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17.707" height="17.707" viewBox="0 0 17.707 17.707">
-            <g id="Group_43" data-name="Group 43" transform="translate(-310.453 -33.336)">
-              <path id="Path_10" data-name="Path 10" d="M1887.452-1065.956l-16.292,16.292" transform="translate(-1560 1100)" fill="#858585" stroke="#858585" stroke-width="2"></path>
-              <path id="Path_11" data-name="Path 11" d="M1871.16-1065.956l16.292,16.292" transform="translate(-1560 1100)" fill="#858585" stroke="#858585" stroke-width="2"></path>
-            </g>
-          </svg>
-        </button>
-        <ul class="nav__list--mobile">
-          <li class="nav__list-element">
-            <a class="nav__link" href="#">nowe bmw ix.</a>
-          </li>
-          <li class="nav__list-element">
-            <a class="nav__link" href="#">innowacyjna aerodynamika</a>
-          </li>
-          <li class="nav__list-element">
-            <a class="nav__link" href="#">galeria</a>
-          </li>
-        </ul>
-
-        <a class="nav__link--mobile button" href="#">Umów jazdę próbną</a>
-      </nav>
     </header>
     <main>
       <section class="slide">
@@ -97,7 +97,7 @@
           <div class="swiper-pagination wrapper"></div>
         </div>
       </section>
-      <section class="facts trigger">
+      <section class="facts">
         <div class="wrapper">
           <article class="facts__photo-container">
             <div class="facts__photo-element">
@@ -154,7 +154,7 @@
           </article>
         </div>
       </section>
-      <section class="facts facts--innovation trigger">
+      <section class="facts facts--innovation">
         <div class="wrapper">
           <article class="facts__description-container facts__description-container--innovation">
             <svg xmlns="http://www.w3.org/2000/svg" width="56.917" height="21" viewBox="0 0 56.917 21">
@@ -428,8 +428,8 @@ gsap.from('.about__menu', {
     start: '50% bottom'
   },
   opacity: 0.2,
-  y: -500,
-  duration: 1.5
+  y: -200,
+  duration: 1
 });
 gsap.from('.about__social', {
   scrollTrigger: {

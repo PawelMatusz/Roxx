@@ -36,8 +36,9 @@
     }
   }
 
-  & svg {
+  &__line {
     @include media(tablet) {
+      display: none;
     }
   }
 }

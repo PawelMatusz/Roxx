@@ -6,7 +6,7 @@
   height: 40px;
   margin-right: 1em;
   cursor: pointer;
-  z-index: 999;
+  z-index: 1;
 
   @include media(tablet) {
     display: block;
