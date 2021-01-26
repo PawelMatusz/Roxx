@@ -19,8 +19,8 @@
   }
   &__photo-container {
     display: flex;
-    align-items: flex-start;
     height: 100%;
+    align-items: flex-start;
     flex: 0 1 50%;
     justify-content: center;
   }
@@ -56,8 +56,8 @@
       @include media(tablet) {
         margin-left: 0;
         margin-top: 150px;
-        flex: 1 1 100%;
         padding: 0 30px;
+        flex: 1 1 100%;
       }
       &--innovation {
         max-width: 536px;
@@ -74,26 +74,24 @@
       }
     }
     &-heading {
+      margin-top: 13px;
       font-family: 'Cairo', sans-serif;
       font-size: 36px;
       line-height: 40px;
       font-weight: 700;
       text-transform: uppercase;
-      margin-top: 13px;
       &--innovation {
         max-width: 200px;
       }
     }
 
     &-card {
+      height: 172px;
       display: flex;
       flex-direction: column;
       flex: 0 1 190px;
-      height: 172px;
       margin-top: 30px;
       margin-right: 30px;
-
-      // max-width: 220px;
     }
     &-text {
       margin-top: 22.5px;
@@ -113,9 +111,9 @@
         position: absolute;
         bottom: -10px;
         left: 0;
-        display: block;
         width: 100%;
         height: 2px;
+        display: block;
         background-color: #eee;
       }
       &::before {
@@ -123,29 +121,29 @@
         position: absolute;
         bottom: -10px;
         left: 0;
-        display: block;
         width: 8%;
         height: 2px;
+        display: block;
         background-color: $color-gray;
         z-index: 999;
       }
     }
   }
   &__text-1 {
+    margin-top: 45px;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 45px;
-    color: #707070;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     line-height: 32px;
+    color: #707070;
   }
   &__text-2 {
+    max-width: 475px;
+    margin-top: 30px;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
-    margin-top: 30px;
-    max-width: 475px;
     color: #4e4e4e;
   }
 }

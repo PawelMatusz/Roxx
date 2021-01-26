@@ -8,8 +8,8 @@
   letter-spacing: 1px;
   color: #fff;
   @include media(tablet) {
-    padding: 10px 60px;
     width: 80%;
+    padding: 10px 60px;
     font-size: 14px;
     text-align: center;
   }
