@@ -34,16 +34,17 @@
     background-image: url(../img/slider1.png);
   }
   &-pagination {
-    bottom: 50px !important;
-    left: 0 !important;
-    max-width: 1380px !important;
-    text-align: left !important;
     @include media(mobile) {
       bottom: 20px !important;
     }
     @include media(mobile-horizontal) {
       bottom: 15px !important;
     }
+    bottom: 50px !important;
+    left: 0 !important;
+    max-width: 1380px !important;
+    text-align: left !important;
+
     &-bullet {
       width: 40px !important;
       height: 5px !important;

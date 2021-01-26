@@ -796,7 +796,7 @@ a:hover {
     bottom: 20px !important;
   }
 }
-@media only screen and (orientation: landscape) {
+@media only screen and (max-width: 860px) and (orientation: landscape) {
   .swiper-pagination {
     bottom: 15px !important;
   }
@@ -894,7 +894,7 @@ a:hover {
     text-align: center;
   }
 }
-@media only screen and (orientation: landscape) {
+@media only screen and (max-width: 860px) and (orientation: landscape) {
   .slide__button.button {
     bottom: 35px;
   }
@@ -989,7 +989,7 @@ a:hover {
   margin-right: 0;
   text-transform: uppercase;
 }
-@media only screen and (orientation: landscape) {
+@media only screen and (max-width: 860px) and (orientation: landscape) {
   .nav--mobile .nav__link--mobile {
     bottom: 20px;
   }
